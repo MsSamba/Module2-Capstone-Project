@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1>💰 Budget Tracker</h1>
+    
+    <!-- Summary Section -->
+    <div class="summary">
+        
+        <div class="card">
+            <h3>Income</h3>
+            <p id="income">KES0.00</p>
+        </div>
+        <div class="card">
+            <h3>Expenses</h3>
+            <p id="expense">KES0.00</p>
+        </div>
+        <div class="card">
+            <h3>Balance</h3>
+            <p id="balance">KES0.00</p>
+        </div>
+    </div>
+
+    <!-- Transaction Form -->
+    <form class="transaction-form" id="transactionForm">
+        <input type="text" id="title" placeholder="Transaction title" required>
+        <input type="number" id="amount" step="0.01" placeholder="Amount" required>
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+    </form>
+
+    <!-- Transaction List -->
+    <ul class="transaction-list" id="transactionList"></ul>
+
+    <footer>
+
+        <hr>
+         
+        <p><b>Contact me:</b> <a href="mailto:sambamichelle1@gmail.com.com">sambamichelle1@gmail.com</a>
+             | Phone: <a href="tel:(+254)714-563-442">(+254)714-563-442</a>        
+        </p>
+
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-linkedin-square'></i>LinkedIn</a> |
+            <a href="#"><i class='bx bxl-github'></i>Github</a> |
+            <a href="#"><i class='bx bxl-instagram' ></i>Instagram</a> |
+            <a href="#"> <i class='bx bxl-twitter'> </i>Twitter</a>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

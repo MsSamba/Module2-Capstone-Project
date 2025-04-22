@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="home-card">
+        <h1>Welcome to Your Budget Tracker</h1>
+        <p>Manage Your Finances Effectively!</p>
+        <br>
+        <br>
+
+        <!-- Modal Sign Up Form -->
+
+        <div id="signup-modal" class="modal hide">
+
+            <div class="modal-content">
+                <h2>Sign Up</h2>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                 
+                <form id="signup-form">
+                    <div class="form-input">
+                        <label for="fullname"><i class='bx bxs-user'></i></label>
+                        <input type="text" placeholder="Enter Name" id="fullname" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="email"><i class='bx bxs-envelope'></i></label>
+                        <input type="email" placeholder="Enter Email" id="email" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="password"><i class='bx bxs-lock'></i></label>
+                        <input type="password" placeholder="Enter Password" id="password" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="confirm-password"><i class='bx bxs-lock'></i></label>
+                <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Sign Up</button>
+                </form>
+
+                <p class="auth-redirect">Already have an account? <a href="#" id="show-login">Log In</a></p>
+            </div>
+    </div>
+
+    <!-- .......................Login Modal ......................-->
+<div id="login-modal" class="modal hide">
+    <div class="modal-content">
+      <h2>Log In</h2>
+      <form id="login-form">
+        <div class="form-input">
+          <label for="login-email"><i class='bx bxs-envelope'></i></label>
+          <input type="email" placeholder="Enter Email" id="login-email" required>
+        </div>
+        <div class="form-input">
+          <label for="login-password"><i class='bx bxs-lock'></i></label>
+          <input type="password" placeholder="Enter Password" id="login-password" required>
+        </div>
+        <button type="submit" class="auth-btn">Log In</button>
+      </form>
+    </div>
+  </div>
+
+    <footer>
+
+        <hr>
+         
+        <p><b>Contact me:</b> <a href="mailto:sambamichelle1@gmail.com.com">sambamichelle1@gmail.com</a>
+             | Phone: <a href="tel:(+254)714-563-442">(+254)714-563-442</a>        
+        </p>
+
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-linkedin-square'></i>LinkedIn</a> |
+            <a href="#"><i class='bx bxl-github'></i>Github</a> |
+            <a href="#"><i class='bx bxl-instagram' ></i>Instagram</a> |
+            <a href="#"> <i class='bx bxl-twitter'> </i>Twitter</a>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
