@@ -52,6 +52,7 @@
   
     if (storedUser && storedUser.email === enteredEmail && storedUser.password === enteredPassword) {
       alert('Login successful!');
+      window.location.href = "budgetapp.html"
             
     } else {
       alert('Invalid credentials!');
@@ -142,3 +143,13 @@ class BudgetTracker {
 
 // Initialize app
 const budgetTracker = new BudgetTracker();
+
+// document.getElementById("show-login").addEventListener("click",() =>{
+//     const form = document.getElementById("login-modal")
+//     form.style.display = "block"
+// })
+
+function view() {
+    const form = document.getElementById("login-modal")
+    form.style.display = "block"
+}
