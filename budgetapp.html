@@ -8,22 +8,24 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <h1>💰 Budget Tracker</h1>
+    <button id="log-out"><a href="index.html">Log Out</a></button>
+    <div class="budget-card">
+        <h1>💰 Budget Tracker</h1>
     
     <!-- Summary Section -->
     <div class="summary">
         
         <div class="card">
             <h3>Income</h3>
-            <p id="income">KES0.00</p>
+            <p id="income">KES 0.00</p>
         </div>
         <div class="card">
             <h3>Expenses</h3>
-            <p id="expense">KES0.00</p>
+            <p id="expense">KES 0.00</p>
         </div>
         <div class="card">
             <h3>Balance</h3>
-            <p id="balance">KES0.00</p>
+            <p id="balance">KES 0.00</p>
         </div>
     </div>
 
@@ -40,6 +42,8 @@
 
     <!-- Transaction List -->
     <ul class="transaction-list" id="transactionList"></ul>
+
+    </div>
 
     <footer>
 

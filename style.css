@@ -9,17 +9,14 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-body {
+/* ..........................Home Page.......................... */
+.home-card {
+    text-align: center;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-}
-
-/* ..........................Home Page.......................... */
-.home-card {
-    text-align: center;
 }
 
 h1,h2 {
@@ -33,6 +30,14 @@ h1,h2 {
 
 .home-card a:hover {
     text-decoration: underline;
+}
+
+.budget-card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
 
 
@@ -94,4 +99,30 @@ button {
     border: none;
     color: #999;
     cursor: pointer;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#log-out {
+    float: right;
+}
+
+#log-out a {
+    color: white;
+    text-decoration: none;
+}
+
+#log-out:hover {
+    background: red;
 }
