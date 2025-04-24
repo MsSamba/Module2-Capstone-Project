@@ -20,7 +20,7 @@ class BudgetTracker {
             title: document.getElementById('title').value,
             amount: parseFloat(document.getElementById('amount').value),
             type: document.getElementById('type').value
-        };
+        }; 
 
         this.transactions.push(transaction);
         this.saveData();
@@ -29,6 +29,7 @@ class BudgetTracker {
     }
 
     deleteTransaction(id) {
+        if (confirm("Are you sure you want to delete this transaction?"))
         this.transactions = this.transactions.filter(t => t.id !== id);
         this.saveData();
         this.render();
