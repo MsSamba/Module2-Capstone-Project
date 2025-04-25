@@ -14,19 +14,36 @@ class BudgetTracker {
 
     addTransaction(e) {
         e.preventDefault();
-        
+    
+        const title = document.getElementById('title').value.trim();
+        const amount = parseFloat(document.getElementById('amount').value);
+        const type = document.getElementById('type').value;
+    
+        if (!title || isNaN(amount) || amount <= 0) {
+            alert('Please enter a valid title and a positive amount.');
+            return;
+        }
+    
+        // Check if expense would make balance negative
+        const { balance } = this.calculateSummary();
+        if (type === 'expense' && amount > balance) {
+            alert('Transaction denied: Expense exceeds current balance.');
+            return;
+        }
+         
         const transaction = {
             id: Date.now(),
-            title: document.getElementById('title').value,
-            amount: parseFloat(document.getElementById('amount').value),
-            type: document.getElementById('type').value
-        }; 
-
+            title,
+            amount,
+            type
+        };
+    
         this.transactions.push(transaction);
         this.saveData();
         this.render();
         this.form.reset();
     }
+    
 
     deleteTransaction(id) {
         if (confirm("Are you sure you want to delete this transaction?"))
@@ -34,7 +51,7 @@ class BudgetTracker {
         this.saveData();
         this.render();
     }
-
+    
     calculateSummary() {
         const income = this.transactions
             .filter(t => t.type === 'income')
@@ -47,7 +64,7 @@ class BudgetTracker {
         return {
             income,
             expense,
-            balance: income - expense
+            balance: income - expense,
         };
     }
 
