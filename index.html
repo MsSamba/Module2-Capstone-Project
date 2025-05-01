@@ -8,87 +8,93 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="home-card">
-        <h1>Welcome to Your Budget Tracker</h1>
-        <p>Manage Your Finances Effectively!</p>
-        <br>
 
-        <!-- Modal Sign Up Form -->
-    <div class="signup-container">
-
-        
-        <div id="signup-modal" class="signup-modal">
-
-            <div class="modal-content">
-                <h2>Sign Up</h2>
-                <p>Please fill in this form to create an account.</p>
-                <hr>
-                 
-                <form id="signup-form">
-                    <div class="form-input">
-                        <label for="fullname"><i class='bx bxs-user'></i></label>
-                        <input type="text" placeholder="Enter Name" id="fullname" required>
-                    </div>
-                      <br>
-                    <div class="form-input">
-                        <label for="email"><i class='bx bxs-envelope'></i></label>
-                        <input type="email" placeholder="Enter Email" id="email" required>
-                    </div>
-                        <br>
-                    <div class="form-input">
-                        <label for="password"><i class='bx bxs-lock'></i></label>
-                        <input type="password" placeholder="Enter Password" id="password" required>
-                    </div>
-                       <br>
-                    <div class="form-input">
-                        <label for="confirm-password"><i class='bx bxs-lock'></i></label>
-                <input type="password" placeholder="Confirm Password" id="confirm-password" required>
-                    </div>
-                    <br>
-                    <button type="submit" class="auth-btn">Sign Up</button>
-                </form>
-
-                <p class="auth-redirect">Already have an account? <button id="show-login"  onclick="view()">Log In </button></p>
+    <div class="home-page">
+        <div class="slider">
+            <div class="slides" id="slides">
+                <img src="Images/Slide1.png" alt="Slide1">
+                <img src="Images/Slide2.png" alt="Slide2">
+                <img src="Images/Slide3.jpeg" alt="Slide3">
             </div>
-    </div>
-    </div>    
 
-    <!-- .......................Login Modal ......................-->
-<div id="login-modal" style="display: none;" class="login-modal">
-    <div class="modal-content">
-      <h2>Log In</h2>
-      <form id="login-form">
-        <div class="form-input">
-          <label for="login-email"><i class='bx bxs-envelope'></i></label>
-          <input type="email" placeholder="Enter Email" id="login-email" required>
+            <!-- Arrows -->
+         <div class="nav-arrows">
+               <button class="arrow" onclick="prevSlide()">❮</button>
+               <button class="arrow" onclick="nextSlide()">❯</button>
+         </div>
+        
+         <!-- Manual Navigation -->
+            <div class="navigation-manual">
+                <span class="manual-btn" onclick="goToSlide(0)"></span>
+                <span class="manual-btn" onclick="goToSlide(1)"></span>
+                <span class="manual-btn" onclick="goToSlide(2)"></span>
+              </div>
+            </div>
+
+        <div class="home-card">
+            <h1>Welcome to Your Budget Tracker</h1>
+            <p>Manage Your Finances Effectively!</p>
+            <br>
+    
+            <!-- Modal Sign Up Form -->
+        <div class="signup-container">
+    
+            
+            <div id="signup-modal" class="signup-modal">
+    
+                <div class="modal-content">
+                    <h2>Sign Up</h2>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                     
+                    <form id="signup-form">
+                        <div class="form-input">
+                            <label for="fullname"><i class='bx bxs-user'></i></label>
+                            <input type="text" placeholder="Enter Name" id="fullname" required>
+                        </div>
+                          <br>
+                        <div class="form-input">
+                            <label for="email"><i class='bx bxs-envelope'></i></label>
+                            <input type="email" placeholder="Enter Email" id="email" required>
+                        </div>
+                            <br>
+                        <div class="form-input">
+                            <label for="password"><i class='bx bxs-lock'></i></label>
+                            <input type="password" placeholder="Enter Password" id="password" required>
+                        </div>
+                           <br>
+                        <div class="form-input">
+                            <label for="confirm-password"><i class='bx bxs-lock'></i></label>
+                    <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="auth-btn">Sign Up</button>
+                    </form>
+    
+                    <p class="auth-redirect">Already have an account? <button id="login"><a href="login.html">Log In</a> </button></p>
+                </div>
         </div>
-        <br>
-        <div class="form-input">
-          <label for="login-password"><i class='bx bxs-lock'></i></label>
-          <input type="password" placeholder="Enter Password" id="login-password" required>
+        </div>    
+    
+    </div>
+
+    <footer>
+    
+        <hr>
+         
+        <p><b>Contact me:</b> <a href="mailto:sambamichelle1@gmail.com.com">sambamichelle1@gmail.com</a>
+             | Phone: <a href="tel:(+254)714-563-442">(+254)714-563-442</a>        
+        </p>
+    
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-linkedin-square'></i>LinkedIn</a> |
+            <a href="#"><i class='bx bxl-github'></i>Github</a> |
+            <a href="#"><i class='bx bxl-instagram' ></i>Instagram</a> |
+            <a href="#"> <i class='bx bxl-twitter'> </i>Twitter</a>
         </div>
-        <br>
-        <button type="submit" class="auth-btn">Log In</button>
-      </form>
-    </div>
-  </div>
-
-  <footer>
-
-    <hr>
-     
-    <p><b>Contact me:</b> <a href="mailto:sambamichelle1@gmail.com.com">sambamichelle1@gmail.com</a>
-         | Phone: <a href="tel:(+254)714-563-442">(+254)714-563-442</a>        
-    </p>
-
-    <div class="social-media">
-        <a href="#"><i class='bx bxl-linkedin-square'></i>LinkedIn</a> |
-        <a href="#"><i class='bx bxl-github'></i>Github</a> |
-        <a href="#"><i class='bx bxl-instagram' ></i>Instagram</a> |
-        <a href="#"> <i class='bx bxl-twitter'> </i>Twitter</a>
-    </div>
-
-</footer>
+    
+    </footer>
+    
     <script src="index.js"></script>
 </body>
 </html>

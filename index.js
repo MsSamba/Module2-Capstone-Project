@@ -1,3 +1,30 @@
+// Slide Logic
+
+const slides = document.getElementById('slides');
+  const totalSlides = slides.children.length;
+  let index = 0;
+
+  function showSlide(i) {
+    slides.style.transform = `translateX(-${i * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide(index);
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide(index);
+  }
+
+  function goToSlide(i) {
+    index = i;
+    showSlide(index);
+  }
+
+  setInterval(nextSlide, 4000);
+
 // Signup Auth
 document.getElementById('signup-form').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -28,31 +55,9 @@ document.getElementById('signup-form').addEventListener('submit', (e) => {
     users.push(userData);
     localStorage.setItem('users', JSON.stringify(users));
     alert('Registration successful! Please login.');
+    window.location.href = "login.html";
   });
 
 
-// Login Auth
-document.getElementById('login-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-  
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    const enteredEmail = document.getElementById('login-email').value;
-    const enteredPassword = document.getElementById('login-password').value;
-  
-    // Find a user with matching email and password
-    const matchedUser = users.find(user => user.email === enteredEmail && user.password === enteredPassword);
-  
-    if (matchedUser) {
-      alert('Login successful!');
-      window.location.href = "budgetapp.html";
-    } else {
-      alert('Invalid credentials!');
-    }
-  });
-  
-//   Login Modal
 
-  function view() {
-    const form = document.getElementById("login-modal")
-    form.style.display = "block"
-}
+  

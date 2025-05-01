@@ -10,14 +10,110 @@
 }
 
 /* ..........................Home Page.......................... */
+
+.home-page {
+        display: flex;
+        align-items: flex-start; 
+        justify-content: space-between; 
+        gap: 20px; 
+        flex-wrap: wrap; 
+        padding: 20px;
+        background-color: var(--primary);
+      
+}
+
+.slider {
+    flex: 1 1 60%; /* Grow, shrink, base width */
+    max-width: 60%;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: #000;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .slides img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .nav-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 15px;
+  }
+
+  .arrow {
+    background: rgba(255,255,255,0.6);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  .navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #fff;
+  }
+
+  @media (max-width: 60%) {
+    .arrow {
+      font-size: 16px;
+      padding: 8px;
+    }
+
+    .manual-btn {
+      padding: 4px;
+    }
+  }
+
 .home-card {
+    flex: 1 1 35%;
+    max-width: 35%;
     text-align: center;
-    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-color: #fff;
 }
+
+@media (max-width: 40%) {
+    .home-page {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .slider, .home-card {
+      max-width: 100%;
+    }
+  }
 
 h1,h2 {
     color: var(--primary);
@@ -32,6 +128,21 @@ h1,h2 {
     text-decoration: underline;
 }
 
+.form-input input {
+    width: 80%;
+}
+
+.login-modal {
+    max-width: 50%;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/*.......................................... Budget Page............................................... */
 .budget-card {
     max-width: 800px;
     margin: 20px auto;
@@ -102,7 +213,10 @@ button {
 }
 
 footer {
+    width: 100%;
+    background-color: #fff;
     text-align: center;
+    margin-bottom: 0;
 }
 
 footer a {
@@ -113,6 +227,30 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+#login a {
+    color: white;
+    text-decoration: none;
+}
+
+#login:hover {
+    background: black;
+}
+
+#log-in {
+    float: right;
+}
+
+
+#log-in a {
+    color: white;
+    text-decoration: none;
+}
+
+#log-in:hover {
+    background: black;
+}
+
 
 #log-out {
     float: right;
@@ -125,4 +263,8 @@ footer a:hover {
 
 #log-out:hover {
     background: red;
+}
+
+.auth-btn:hover {
+    background: black;
 }
